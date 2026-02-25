@@ -16,7 +16,7 @@ namespace ThirdTask.Tests
         {
             var str = "Тест";
             
-            var result=Logic.Calculation(str);
+            var result=Logic.CalculatePercentLetter(str);
 
             Assert.AreEqual(100, result);
         }
@@ -26,7 +26,7 @@ namespace ThirdTask.Tests
         {
             var str = "Тест тест";
 
-            var result = Logic.Calculation(str);
+            var result = Logic.CalculatePercentLetter(str);
 
             Assert.AreEqual(88.89, result);
         }
@@ -36,7 +36,7 @@ namespace ThirdTask.Tests
         {
             var str = "Тест   тест";
 
-            var result = Logic.Calculation(str);
+            var result = Logic.CalculatePercentLetter(str);
 
             Assert.AreEqual(72.73, result);
         }
@@ -46,7 +46,7 @@ namespace ThirdTask.Tests
         {
             var str = "Тест,тест";
 
-            var result = Logic.Calculation(str);
+            var result = Logic.CalculatePercentLetter(str);
 
             Assert.AreEqual(88.89, result);
         }
@@ -56,7 +56,7 @@ namespace ThirdTask.Tests
         {
             var str = "Тест,!^тест";
 
-            var result = Logic.Calculation(str);
+            var result = Logic.CalculatePercentLetter(str);
 
             Assert.AreEqual(72.73, result);
         }
@@ -66,7 +66,7 @@ namespace ThirdTask.Tests
         {
             var str = "Тест, который выполнится!";
 
-            var result = Logic.Calculation(str);
+            var result = Logic.CalculatePercentLetter(str);
 
             Assert.AreEqual(84, result);
         }
